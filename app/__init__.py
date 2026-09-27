@@ -26,4 +26,10 @@ def create_app(config_class=Config):
     with app.app_context():
         from app import models
 
+ # Registrar el Blueprint de las rutas
+    from app.routes import main_bp
+    app.register_blueprint(main_bp)
+
+
+
     return app
