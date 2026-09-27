@@ -9,7 +9,7 @@ tocar la lógica del programa.
 import os
 
 # Ruta absoluta a la carpeta raíz del proyecto (donde está run.py).
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
@@ -19,16 +19,16 @@ class Config:
     # TODO 1: Cambia este valor por una cadena secreta propia.
     #         En un proyecto real se lee de una variable de entorno:
     #         os.environ.get("SECRET_KEY", "valor-por-defecto")
-    SECRET_KEY = "cambia-esta-clave"
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'clave-secreta-muy-segura'
 
     # URI de conexión a la base de datos.
     # Para SQLite el formato es: sqlite:///<ruta-absoluta-al-archivo>
     # El archivo .db se creará dentro de la carpeta instance/
     # TODO 2: Verifica que la ruta apunte a instance/tienda.db.
     #         Si cambias el nombre del archivo, actualízalo aquí.
-    SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(
-        BASE_DIR, "instance", "tienda.db"
-    )
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+        'sqlite:///' + os.path.join(basedir, 'instance', 'tienda.db')
+
 
     # Desactiva un sistema de eventos de SQLAlchemy que no usamos y
     # que consume memoria innecesariamente.
@@ -37,4 +37,4 @@ class Config:
     # TODO 3 (opcional): pon esta opción en True para ver en la terminal
     # el SQL que SQLAlchemy genera. Es muy útil para entender qué hace
     # el ORM por debajo. Desactívala cuando ya no la necesites.
-    SQLALCHEMY_ECHO = False
+    SQLALCHEMY_ECHO = True

@@ -1,32 +1,82 @@
 [
   {
-    "sku": "TEC-001",
-    "marca": "Logitech",
-    "nombre": "Mouse inalámbrico MX Master",
-    "precio": 349900,
-    "foto": "images/mouse-mx-master.jpg",
-    "stock": 12,
-    "activo": true,
-    "categoria": "Periféricos"
-  },
-  {
-    "sku": "TEC-002",
-    "marca": "Kingston",
-    "nombre": "Memoria USB 64GB",
-    "precio": 39900,
-    "foto": "images/usb-kingston-64gb.jpg",
-    "stock": 40,
-    "activo": true,
-    "categoria": "Almacenamiento"
-  },
-  {
-    "sku": "AUD-001",
-    "marca": "Sony",
-    "nombre": "Audífonos WH-1000XM4",
-    "precio": 1199000,
-    "foto": "images/audifonos-sony.jpg",
+    "sku": "PAP-001",
+    "marca": "Margarita",
+    "nombre": "Papas Fritas Sabor a Cebolla",
+    "precio": 3500,
+    "foto": "images/papas-cebolla.jpg",
     "stock": 0,
     "activo": true,
-    "categoria": "Audio"
+    "categoria": "Papas Tradicionales"
+  },
+  {
+    "sku": "PAP-002",
+    "marca": "Margarita",
+    "nombre": "Papas Fritas Sabor a Pollo",
+    "precio": 3500,
+    "foto": "images/papas-pollo.jpg",
+    "stock": 20,
+    "activo": true,
+    "categoria": "Papas Tradicionales"
+  },
+  {
+    "sku": "PAP-003",
+    "marca": "Super Ricas",
+    "nombre": "Papas con Sabor a Tomate y Kétchup",
+    "precio": 3200,
+    "foto": "images/papas-tomate.jpg",
+    "stock": 15,
+    "activo": true,
+    "categoria": "Papas Tradicionales"
+  },
+  {
+    "sku": "SNK-001",
+    "marca": "Natural Chips",
+    "nombre": "Papas Artesanales Sabor a Huevo y Sal Marina",
+    "precio": 4500,
+    "foto": "images/papas-huevo.jpg",
+    "stock": 8,
+    "activo": true,
+    "categoria": "Artesanales"
+  },
+  {
+    "sku": "SNK-002",
+    "marca": "De Todito",
+    "nombre": "Crocante Mix con Limón y Pimienta",
+    "precio": 5000,
+    "foto": "images/detodito-limon.jpg",
+    "stock": 12,
+    "activo": true,
+    "categoria": "Mezclas y Snacks"
+  },
+  {
+    "sku": "SNK-003",
+    "marca": "McPollo",
+    "nombre": "Platanitos Verdes con Sal y Ajo",
+    "precio": 3000,
+    "foto": "images/platanitos-ajo.jpg",
+    "stock": 25,
+    "activo": true,
+    "categoria": "Plátanos y Yucas"
+  },
+  {
+    "sku": "SNK-004",
+    "marca": "Yucaditas",
+    "nombre": "Yucas Fritas Crujientes Barbacoa",
+    "precio": 3800,
+    "foto": "images/yucas-barbacoa.jpg",
+    "stock": 10,
+    "activo": true,
+    "categoria": "Plátanos y Yucas"
+  },
+  {
+    "sku": "SNK-005",
+    "marca": "Choclitos",
+    "nombre": "Ganchitos de Maíz con Queso Picante",
+    "precio": 2800,
+    "foto": "images/choclitos-picante.jpg",
+    "stock": 18,
+    "activo": true,
+    "categoria": "Mezclas y Snacks"
   }
 ]
