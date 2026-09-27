@@ -1,23 +1,31 @@
 {% extends "base.html" %}
 
-{% block titulo %}{# TODO: muestra producto.nombre #} - Tienda Virtual{% endblock %}
+{% block content %}
+<div class="row mt-4">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">{{ producto.nombre }}</h2>
+                <h5 class="card-subtitle mb-3 text-muted">Marca: {{ producto.marca }}</h5>
 
-{% block contenido %}
-<div class="detalle-producto">
+                <p class="card-text"><strong>Precio:</strong> ${{ producto.precio }}</p>
+                <p class="card-text"><strong>SKU:</strong> {{ producto.sku }}</p>
+                <p class="card-text"><strong>Stock disponible:</strong> {{ producto.stock }} unidades</p>
+                <p class="card-text"><strong>Categoría:</strong> {{ producto.categoria.nombre }}</p>
 
-    {# TODO 1: Imagen del producto:
-       <img src="{{ url_for('static', filename=producto.foto) }}" alt="..."> #}
+                <div class="mb-3">
+                    {% if producto.stock > 0 %}
+                        <span class="badge bg-success fs-6">Disponible</span>
+                    {% else %}
+                        <span class="badge bg-danger fs-6">Agotado</span>
+                    {% endif %}
+                </div>
 
-    {# TODO 2: Nombre en un <h2> #}
-
-    {# TODO 3: Marca, SKU y categoría (producto.categoria.nombre) #}
-
-    {# TODO 4: Precio formateado:
-       <p>${{ "{:,.0f}".format(producto.precio) }}</p> #}
-
-    {# TODO 5: Muestra las unidades en stock (producto.stock) y un mensaje
-       distinto según producto.disponible sea True o False. #}
-
-    <p><a href="{{ url_for('main.index') }}">&larr; Volver al catálogo</a></p>
+                <div class="mt-4">
+                    <a href="{{ url_for('main.index') }}" class="btn btn-secondary">Volver al Catálogo</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

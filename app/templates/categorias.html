@@ -1,23 +1,54 @@
 {% extends "base.html" %}
 
-{% block titulo %}Categorías - Tienda Virtual{% endblock %}
+{% block content %}
+<div class="row mt-4">
+    <!-- Columna lateral para Categorías -->
+    <div class="col-md-3">
+        <h3>Categorías</h3>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">
+                <a href="{{ url_for('main.index') }}" class="text-decoration-none">Todas las categorías</a>
+            </li>
+            {% for cat in categorias %}
+            <li class="list-group-item {% if cat.id == categoria.id %}active{% endif %}">
+                <a href="{{ url_for('main.productos_por_categoria', id=cat.id) }}" class="text-decoration-none {% if cat.id == categoria.id %}text-white{% endif %}">
+                    {{ cat.nombre }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 
-{% block contenido %}
-<div class="lista-categorias">
-    <h2>Categorías</h2>
+    <!-- Productos de la Categoría Seleccionada -->
+    <div class="col-md-9">
+        <h2>Productos en: {{ categoria.nombre }}</h2>
+        <div class="row">
+            {% for producto in productos %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ producto.nombre }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ producto.marca }}</h6>
+                        <p class="card-text">Precio: ${{ producto.precio }}</p>
 
-    <ul>
-    {# TODO 1: Recorre 'categorias' con un ciclo for. #}
+                        {% if producto.stock > 0 %}
+                            <span class="badge bg-success">Disponible</span>
+                        {% else %}
+                            <span class="badge bg-danger">Agotado</span>
+                        {% endif %}
 
-    {# TODO 2: Por cada una muestra su nombre y, entre paréntesis, cuántos
-       productos tiene. Gracias al backref puedes contar así:
-           {{ categoria.productos|length }}
-
-       Y enlázala al catálogo filtrado:
-           <a href="{{ url_for('main.index', categoria=categoria.id) }}">...</a>
-    #}
-
-    {# TODO 3: Cierra el ciclo con {% endfor %} #}
-    </ul>
+                        <div class="mt-3">
+                            <a href="{{ url_for('main.detalle_producto', id=producto.id) }}" class="btn btn-primary btn-sm">Ver Detalle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="col-12">
+                <p class="alert alert-warning">No hay productos disponibles en esta categoría.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}
