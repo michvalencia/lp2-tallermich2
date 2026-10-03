@@ -4,7 +4,7 @@
     "marca": "Margarita",
     "nombre": "Papas Fritas Sabor a Cebolla",
     "precio": 3500,
-    "foto": "images/papas-cebolla.jpg",
+    "foto": "images/papa-cebolla.webp",
     "stock": 0,
     "activo": true,
     "categoria": "Papas Tradicionales"
@@ -14,7 +14,7 @@
     "marca": "Margarita",
     "nombre": "Papas Fritas Sabor a Pollo",
     "precio": 3500,
-    "foto": "images/papas-pollo.jpg",
+    "foto": "images/papa-pollo.webp",
     "stock": 20,
     "activo": true,
     "categoria": "Papas Tradicionales"
@@ -22,61 +22,61 @@
   {
     "sku": "PAP-003",
     "marca": "Super Ricas",
-    "nombre": "Papas con Sabor a Tomate y Kétchup",
+    "nombre": "Papas con Sabor a Tomate y Ketchup",
     "precio": 3200,
-    "foto": "images/papas-tomate.jpg",
+    "foto": "images/papa-tomate.webp",
     "stock": 15,
     "activo": true,
     "categoria": "Papas Tradicionales"
   },
   {
-    "sku": "SNK-001",
+    "sku": "PAP-004",
     "marca": "Natural Chips",
     "nombre": "Papas Artesanales Sabor a Huevo y Sal Marina",
     "precio": 4500,
-    "foto": "images/papas-huevo.jpg",
+    "foto": "images/papa-huevo.webp",
     "stock": 8,
     "activo": true,
     "categoria": "Artesanales"
   },
   {
-    "sku": "SNK-002",
+    "sku": "SNK-001",
     "marca": "De Todito",
     "nombre": "Crocante Mix con Limón y Pimienta",
     "precio": 5000,
-    "foto": "images/detodito-limon.jpg",
+    "foto": "images/limon-pimienta.webp",
     "stock": 12,
     "activo": true,
     "categoria": "Mezclas y Snacks"
   },
   {
-    "sku": "SNK-003",
+    "sku": "SNK-002",
     "marca": "McPollo",
     "nombre": "Platanitos Verdes con Sal y Ajo",
     "precio": 3000,
-    "foto": "images/platanitos-ajo.jpg",
+    "foto": "images/platano-sal.webp",
     "stock": 25,
     "activo": true,
     "categoria": "Plátanos y Yucas"
   },
   {
-    "sku": "SNK-004",
-    "marca": "Yucaditas",
-    "nombre": "Yucas Fritas Crujientes Barbacoa",
+    "sku": "PAP-005",
+    "marca": "Margarita",
+    "nombre": "Papas Yuca Crocantes",
     "precio": 3800,
-    "foto": "images/yucas-barbacoa.jpg",
+    "foto": "images/papa-yuca.webp",
     "stock": 10,
     "activo": true,
     "categoria": "Plátanos y Yucas"
   },
   {
-    "sku": "SNK-005",
-    "marca": "Choclitos",
-    "nombre": "Ganchitos de Maíz con Queso Picante",
-    "precio": 2800,
-    "foto": "images/choclitos-picante.jpg",
+    "sku": "PAP-006",
+    "marca": "Super Ricas",
+    "nombre": "Papas Sabor a Maíz Dulce",
+    "precio": 3600,
+    "foto": "images/papa-maiz.webp",
     "stock": 18,
     "activo": true,
-    "categoria": "Mezclas y Snacks"
+    "categoria": "Papas Tradicionales"
   }
 ]

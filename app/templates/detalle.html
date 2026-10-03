@@ -1,31 +1,46 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row mt-4">
-    <div class="col-md-6 offset-md-3">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title">{{ producto.nombre }}</h2>
-                <h5 class="card-subtitle mb-3 text-muted">Marca: {{ producto.marca }}</h5>
-
-                <p class="card-text"><strong>Precio:</strong> ${{ producto.precio }}</p>
-                <p class="card-text"><strong>SKU:</strong> {{ producto.sku }}</p>
-                <p class="card-text"><strong>Stock disponible:</strong> {{ producto.stock }} unidades</p>
-                <p class="card-text"><strong>Categoría:</strong> {{ producto.categoria.nombre }}</p>
-
-                <div class="mb-3">
-                    {% if producto.stock > 0 %}
-                        <span class="badge bg-success fs-6">Disponible</span>
-                    {% else %}
-                        <span class="badge bg-danger fs-6">Agotado</span>
-                    {% endif %}
+<div class="row mt-4 justify-content-center">
+    <div class="col-md-8">
+        <div class="card card-producto p-4">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                    <div class="card-img-container rounded h-100 p-3">
+                        {% if producto.foto %}
+                            <img src="{{ url_for('static', filename=producto.foto) }}" class="img-fluid rounded" alt="{{ producto.nombre }}" style="max-height: 250px; object-fit: contain;">
+                        {% else %}
+                            <i class="bi bi-box-seam text-secondary display-1"></i>
+                        {% endif %}
+                    </div>
                 </div>
+                <div class="col-md-7">
+                    <span class="text-uppercase text-muted fw-bold">{{ producto.marca }}</span>
+                    <h2 class="fw-bold mb-2">{{ producto.nombre }}</h2>
+                    <span class="badge bg-light text-dark border mb-3">{{ producto.categoria.nombre }}</span>
+                    
+                    <h3 class="text-primary fw-bold mb-3">${{ "{:,.0f}".format(producto.precio) }}</h3>
+                    
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><strong>SKU:</strong> <code>{{ producto.sku }}</code></li>
+                        <li class="mb-2"><strong>Stock actual:</strong> {{ producto.stock }} unidades</li>
+                        <li class="mb-2">
+                            <strong>Estado:</strong> 
+                            {% if producto.disponible %}
+                                <span class="badge badge-disponible ms-1">Disponible</span>
+                            {% else %}
+                                <span class="badge badge-agotado ms-1">Agotado</span>
+                            {% endif %}
+                        </li>
+                    </ul>
 
-                <div class="mt-4">
-                    <a href="{{ url_for('main.index') }}" class="btn btn-secondary">Volver al Catálogo</a>
+                    <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-1"></i> Volver al Catálogo
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
+
