@@ -13,15 +13,12 @@ def registrar_comandos(app):
         print("¡Base de datos inicializada con éxito!")
 
     @app.cli.command("reset-db")
-    def reset_db():
-        """Borra todas las tablas y las vuelve a crear."""
-        respuesta = input("¿Estás segura de reiniciar la base de datos? Se perderán los datos (s/n): ")
-        if respuesta.lower() == 's':
-            db.drop_all()
-            db.create_all()
-            print("¡Base de datos reiniciada (reset) correctamente!")
-        else:
-            print("Operación cancelada.")
+
+def reset_db():
+    """Elimina y recrea las tablas de la base de datos."""
+    db.drop_all()
+    db.create_all()
+    print("Base de datos reiniciada con éxito.")
 
     @app.cli.command("seed-db")
     def seed_db():
