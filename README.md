@@ -1,23 +1,39 @@
-# Lenguaje de Programación 2 - Taller 2
+# Catálogo de Productos - Taller Flask
 
-![commits](https://badgen.net/github/commits/clubdecomputacion/lp2-taller2?icon=github) 
-![last_commit](https://img.shields.io/github/last-commit/clubdecomputacion/lp2-taller2)
+Aplicación web desarrollada en Python con Flask para la gestión y visualización de un catálogo de productos organizados por categorías.
 
-- ver [badgen](https://badgen.net/) o [shields](https://shields.io/) para otros tipos de _badges_
+# Instalación y Configuración
+Clonar el repositorio
 
-## Autor
+   ```bash
+   git clone [https://github.com/TU_USUARIO/lp2-tallermich2.git](https://github.com/TU_USUARIO/lp2-tallermich2.git)
+   cd lp2-tallermich2
 
-- [@estudiante](https://www.github.com/estudiante)
+1. Crear y activar el entorno virtual:
+python3 -m venv venv
+source venv/bin/activate
 
-## Descripción del Proyecto
+2.Instalar las dependencias
+pip install -r requirements.txt
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut quam dolor. Quisque elementum est sed massa gravida convallis. Donec volutpat turpis eget lectus feugiat congue. Morbi rutrum auctor eleifend. Etiam iaculis libero tellus, vel aliquet erat tempor sed. Duis efficitur quam vel sapien luctus, sed semper lacus mollis. Suspendisse non nunc eleifend, aliquet elit eget, condimentum augue.
+4. Ejecució del proyecto
+flask run                - Navegador http://127.0.0.1:5000
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vel nibh fringilla, porta elit vel, consequat libero. Nulla et libero ac nulla ultricies sollicitudin. Sed viverra non nulla id convallis. Morbi vel varius lacus, in maximus nunc. Praesent sed semper diam. Pellentesque vehicula nulla augue, ut porta dolor consequat at.
+5. Estructura del proyecto
 
-## Proceso
+lp2-tallermich2/
+├── app/
+│   ├── data/           # Archivos JSON de datos iniciales
+│   ├── static/         # Estilos CSS, imágenes y scripts
+│   ├── templates/      # Plantillas HTML (Jinja2)
+│   ├── commands.py     # Comandos CLI personalizados de Flask
+│   ├── models.py       # Modelos de SQLAlchemy
+│   └── routes.py       # Rutas y vistas de la aplicación
+├── instance/           # Base de datos SQLite local
+├── config.py           # Configuración del entorno Flask
+├── run.py              # Punto de entrada de la aplicación
+└── requirements.txt    # Dependencias del proyecto
 
-Morbi quam lectus, tempus sit amet mi non, facilisis dignissim erat. Aenean tortor libero, rhoncus eu eleifend ut, volutpat id nisi. Ut porta eros at ante rutrum pharetra. Integer nec nulla dictum, vestibulum ligula id, hendrerit ex. Morbi eget tortor metus.
 
-[GUIA.md](docs/GUIA.md)
+
 
