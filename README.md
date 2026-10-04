@@ -16,7 +16,7 @@ source venv/bin/activate
 2.Instalar las dependencias
 pip install -r requirements.txt
 
-4. Ejecució del proyecto
+4. Ejecución del proyecto
 flask run                - Navegador http://127.0.0.1:5000
 
 5. Estructura del proyecto
